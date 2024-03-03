@@ -141,6 +141,9 @@ main {
     }
 }
 @media (max-width: 992px) {
+    .navbar a{
+        font-size: 15px;
+    }
     header p{
         font-size: 3.5vw;
     }
@@ -164,6 +167,9 @@ main {
     }
 }
 @media (max-width: 480px) {
+   .navbar a{
+        font-size: 13px;
+    } 
     header p{
         font-size: 4vw;
     }
@@ -222,6 +228,9 @@ main {
         margin-bottom: 20px;
         padding: 20px;
         border-radius: 5px; 
+    }
+    .pricing-table{
+        display: none;
     }
 }
 
