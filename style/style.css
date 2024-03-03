@@ -1,0 +1,356 @@
+:root{
+    --white: #EEEDEB;
+    --fade: #E0CCBE;
+    --shade: #747264;
+    --dark: #3C3633;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--white);
+    color: var(--dark);
+    font-family: "Signika", sans-serif;
+}
+.navbar {
+    position: absolute;
+    right: 10px;
+    overflow: hidden;
+    height:40px;
+    padding-top: 30px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    border-radius: 5px;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--fade);
+    border-bottom: 2px solid var(--fade); 
+}
+
+h1,h2{
+   background: linear-gradient(270deg, var(--shade),var(--dark));
+  -webkit-background-clip: text; 
+  display: inline-block;
+  -webkit-text-fill-color: transparent;
+  font-family: "Rozha One", serif;
+}
+
+.adjust{
+    margin-left: 5vw;
+}
+h3, header p{
+    font-family: "Parisienne", cursive;
+}
+header {
+    background: linear-gradient(90deg,var(--fade),var(--dark));
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    font-size: 15vw;
+    margin: 0;
+    background: linear-gradient(270deg, var(--fade),var(--white));
+    -webkit-background-clip: text; 
+    display: inline-block;
+    -webkit-text-fill-color: transparent;
+}
+header p{
+    font-size: 1.5vw;
+}
+
+
+main {
+    padding: 20px;
+}
+
+.product-showcase{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.product{
+    margin-bottom: 95px;
+    border-radius: 50px 0 50px 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+.product:hover .description{
+    font-size: 1.1em;
+}
+
+.product .description{
+    background: linear-gradient(120deg, var(--fade),var(--white),var(--white),var(--fade));
+    transition: 0.3s ease;
+}
+
+.pricing-card h3{
+    font-size: 2em;
+}
+
+@media (min-width: 992px) {
+    .product{
+        max-width: 45vw;
+        min-width: 30vw;
+        height: 18vw;
+        display: flex;
+    }
+
+    .product .description{
+       color: var(--shade);
+       padding: 10px 20px;
+       width: 100%;
+    }
+    .product .description p{
+        margin-top: -10px;
+    }
+    .product .show{
+        width: 40%;
+    }
+    .product .show img{
+        height: 100%;
+    }
+}
+@media (max-width: 992px) {
+    header p{
+        font-size: 3.5vw;
+    }
+    .product{
+        max-width: 40vw;
+        min-width: 20vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product .description{
+       padding: 10px;
+       height: 100%;
+    }
+
+    .product .show{
+        width: 100%;
+    }
+    .product .show img{
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    header p{
+        font-size: 4vw;
+    }
+    .product{
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product .description{
+       padding: 10px;
+    }
+
+    .product .show{
+        width: 100%;
+    }
+    .product .show img{
+        width: 100%;
+    }
+}
+.pricing-card{
+    background: linear-gradient(45deg, var(--fade),var(--white));
+    color: var(--shade); 
+}
+@media (min-width: 768px) {
+    h1{
+        font-size: 7vw;
+    }
+    .pricing-cards {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .pricing-card {
+        width: 27%;
+        padding: 20px;
+        border-radius: 5px; 
+    }
+}
+
+
+@media (max-width: 767px) {
+    h1{
+        font-size: 11vw;
+    }
+    .pricing-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .pricing-card {
+        width: 80%;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 5px; 
+    }
+}
+
+
+.testimonial-list {
+    margin-top: 20px;
+    max-width: 90vw;
+    margin-left: 3.5vw;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.testimonial-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    margin: auto;
+}
+
+.testimonial {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px;
+    text-align: center;
+    background: linear-gradient(120deg, var(--white),var(--fade));
+    border-radius: 20px 20px 0 0;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.quote {
+    padding: 10px;
+    background-color: #f4f4f4;
+    height: 45%;
+    border-radius: 0;
+}
+
+blockquote {
+    margin: 0;
+    font-family: "Rozha One", serif;
+ 
+}
+
+.pricing-table {
+    background-color: var(--white);
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.table-head {
+    background: linear-gradient(90deg, var(--fade), var(--dark));
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
+
+
+.table-head h2{
+    margin: 0;
+    font-size: 24px;
+    color: var(--white);
+}
+
+.table-body {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--fade);
+}
+
+th {
+    background: var(--fade);
+    color: #fff;
+}
+
+.cta-button {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, var(--fade),var(--white), var(--fade));
+    background: transparent;
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+    height: 35vh;
+    font-size: 28px;
+}
+
+.cta-button a ,button{
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--shade),var(--fade), var(--dark));
+    border-radius: 20px 0;
+    border: none;
+    color: var(--white);
+    font-family: "Rozha One", serif;
+    transition: 0.3s ease;
+}
+
+button:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,.15);
+    border-radius: 10px 0;
+}
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
